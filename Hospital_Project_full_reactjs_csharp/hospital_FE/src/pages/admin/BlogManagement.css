@@ -1,0 +1,175 @@
+.tox-tinymce {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control-lg.border-0:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.featured-image-preview {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.blog-table img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+}
+
+.action-buttons button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Search input and icon styles */
+.search-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border-right: none;
+  padding-right: 40px; /* Make room for the icon */
+}
+
+.search-input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.category-select {
+  min-width: 150px;
+}
+
+.table-responsive {
+  margin-bottom: 0;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  min-width: 120px;
+  padding: 0.25rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #495057;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item i {
+  width: 16px;
+  margin-right: 0.5rem;
+  color: #6c757d;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #ddd;
+}
+
+.btn-light:hover {
+  background-color: #e9ecef;
+  border-color: #ddd;
+}
+
+.table th {
+  font-weight: 500;
+  color: #495057;
+  border-top: none;
+  padding: 1rem;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
+}
+
+.tox .tox-edit-area__iframe {
+  background-color: white !important;
+}
+
+.tox .tox-statusbar {
+  border-top: 1px solid #e9ecef !important;
+}
+
+.image-upload-placeholder {
+  border: 2px dashed #dee2e6;
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-upload-placeholder:hover {
+  border-color: #adb5bd;
+  background-color: #f8f9fa;
+}
+
+.image-preview-container {
+  position: relative;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.remove-image-btn:hover {
+  opacity: 1;
+} 

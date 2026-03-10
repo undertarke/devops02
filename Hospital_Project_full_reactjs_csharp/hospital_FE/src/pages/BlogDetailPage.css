@@ -1,0 +1,34 @@
+.blog-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h2, 
+.blog-content h3, 
+.blog-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.blog-content a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+} 

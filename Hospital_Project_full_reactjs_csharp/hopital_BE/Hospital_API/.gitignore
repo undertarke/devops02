@@ -1,0 +1,38 @@
+# Ignore bin and obj folders
+bin/
+obj/
+
+# But keep the docs folder and its contents
+!docs/
+!docs/*
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.apphost.exe
+
+# User-specific files
+*.user
+*.vs/
+*.suo
+
+# Logs
+*.log
+
+# NuGet
+project.lock.json
+project.assets.json
+*.nupkg
+*.snupkg
+
+# Others
+.env
+
+#appsetting
+# appsettings.Development.json
+
+Hospital_API/publish/appsettings.json
+
+
+# Migrations/

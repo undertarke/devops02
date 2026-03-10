@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hospital_API</name>
+    </assembly>
+    <members>
+        <member name="M:Hospital_API.Controllers.AppointmentController.GetAll">
+            <summary>
+            Get all appointments
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.GetById(System.Int32)">
+            <summary>
+            Get appointment by ID
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.Create(Hospital_API.DTOs.AppointmentCreateDTO)">
+            <summary>
+            Create a new appointment
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.Confirm(System.Int32)">
+            <summary>
+            Confirm an appointment
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.Cancel(System.Int32)">
+            <summary>
+            Cancel an appointment
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.GetByDoctorAndDate(System.Int32,System.DateTime)">
+            <summary>
+            Get appointments by doctor and date
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.AppointmentController.GetAvailableTimes(System.Int32,System.DateTime)">
+            <summary>
+            Get available time slots for doctor
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoiceDetailController.GetAll">
+            <summary>
+            Lấy tất cả các dòng chi tiết hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoiceDetailController.GetById(System.Int32)">
+            <summary>
+            Lấy chi tiết hóa đơn theo ID
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoiceDetailController.GetByInvoiceId(System.Int32)">
+            <summary>
+            Lấy tất cả dòng chi tiết theo ID hóa đơn cha
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoiceDetailController.Create(Hospital_API.DTOs.InvoiceDetailCreateDTO)">
+            <summary>
+            Tạo mới dòng chi tiết hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoiceDetailController.Delete(System.Int32)">
+            <summary>
+            Xóa dòng chi tiết hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.GetAll">
+            <summary>
+            Lấy toàn bộ hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.GetById(System.Int32)">
+            <summary>
+            Lấy hóa đơn theo ID
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.GetByAppointmentId(System.Int32)">
+            <summary>
+            Lấy hóa đơn theo lịch hẹn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.Create(Hospital_API.DTOs.InvoiceCreateDTO)">
+            <summary>
+            Tạo mới hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.Update(System.Int32,Hospital_API.DTOs.InvoiceUpdateDTO)">
+            <summary>
+            Cập nhật hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.InvoicesController.Delete(System.Int32)">
+            <summary>
+            Xoá hóa đơn
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.RolePermissionController.AssignPermissions(Hospital_API.DTOs.AssignPermissionsDto)">
+            <summary>
+            Gán nhiều quyền cho 1 role
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.RolePermissionController.GetPermissionsByRole(System.Int32)">
+            <summary>
+            Lấy danh sách quyền theo RoleId
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Controllers.RolePermissionController.RemovePermission(System.Int32,System.Int32)">
+            <summary>
+            Xoá 1 quyền khỏi role
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Repositories.UserRepository.Update(Hospital_API.Models.User)">
+            <summary>
+            Chỉ đánh dấu entity để update. Không gọi SaveChangesAsync.
+            </summary>
+        </member>
+        <member name="M:Hospital_API.Interfaces.IUserRepository.Update(Hospital_API.Models.User)">
+            <summary>
+            Cập nhật entity User đã được attach.
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Hospital_API.Interfaces.IUserRepository.DeleteByIdAsync(System.Int32)">
+            <summary>
+            Xóa user theo id, nếu không tìm thấy thì không lỗi.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Hospital_API.Interfaces.IUserRepository.SaveChangesAsync">
+            <summary>
+            Lưu tất cả thay đổi
+            </summary>
+        </member>
+        <member name="T:Hospital_API.Migrations.InitCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.InitCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.InitCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.InitCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddStatusToUsers">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddStatusToUsers.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddStatusToUsers.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddStatusToUsers.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddBlogEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogEntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogEntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogEntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateBlogStatusField">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateBlogStatusField.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateBlogStatusField.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateBlogStatusField.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddImageEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddImageEntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddImageEntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddImageEntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateImageEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateImageEntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateImageEntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateImageEntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddBlogImages">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogImages.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogImages.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogImages.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateMedandMedSup">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateMedandMedSup.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateMedandMedSup.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateMedandMedSup.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateDoctorSchedule_AddDateAndStatus">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule_AddDateAndStatus.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule_AddDateAndStatus.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule_AddDateAndStatus.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateDoctorSchedule">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorSchedule.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.UpdateDoctorBranchRelation">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorBranchRelation.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorBranchRelation.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.UpdateDoctorBranchRelation.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddBlogFeaturedImage">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogFeaturedImage.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogFeaturedImage.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddBlogFeaturedImage.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddAppointmentNoColumn">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAppointmentNoColumn.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAppointmentNoColumn.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAppointmentNoColumn.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddAddressToUser">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAddressToUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAddressToUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddAddressToUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddMedicalPackageTables">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddMedicalPackageTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddMedicalPackageTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddMedicalPackageTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Hospital_API.Migrations.AddPrescriptionDetails">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddPrescriptionDetails.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddPrescriptionDetails.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hospital_API.Migrations.AddPrescriptionDetails.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

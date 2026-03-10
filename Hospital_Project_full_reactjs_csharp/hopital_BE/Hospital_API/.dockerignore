@@ -1,0 +1,15 @@
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+.vs/
+.vscode/
+*.log
+*.tmp
+node_modules/
+.git/
+.gitignore
+README.md
+Dockerfile
+.dockerignore 

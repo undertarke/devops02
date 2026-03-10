@@ -1,0 +1,30 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.apphost.exe
+
+# User-specific files
+*.user
+*.vs/
+*.suo
+
+# Logs
+*.log
+
+# NuGet
+project.lock.json
+project.assets.json
+*.nupkg
+*.snupkg
+
+# Others
+.env
+
+#appsetting
+# appsettings.Development.json
+# appsettings.json
+
+# Migrations/

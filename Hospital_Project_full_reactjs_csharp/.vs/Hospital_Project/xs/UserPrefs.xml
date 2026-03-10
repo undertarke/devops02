@@ -1,0 +1,28 @@
+﻿<Properties>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hospital_API/appsettings.json">
+    <Files>
+      <File FileName="Hospital_API/Dockerfile" />
+      <File FileName="Hospital_API/appsettings.json" Line="21" Column="52" />
+      <File FileName="Hospital_API/Controllers/UserController.cs" Line="46" Column="65" />
+      <File FileName="Hospital_API/Services/UserService.cs" Line="60" Column="35" />
+      <File FileName="Hospital_API/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hospital_Project" expanded="True">
+            <Node name="Hospital_API" expanded="True">
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

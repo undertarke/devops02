@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 0;">
+  <div style="max-width: 600px; background-color: #ffffff; margin: 30px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <div style="background-color: #2e86de; color: white; padding: 20px; text-align: center;">
+      <h1 style="margin: 0; font-size: 24px;">Thông tin lịch hẹn khám bệnh</h1>
+    </div>
+    <div style="padding: 30px 25px; color: #333333;">
+      <h2 style="color: #2e86de;">Xin chào, {{FullName}},</h2>
+      <p>Chúng tôi xin xác nhận rằng bạn đã đặt lịch khám thành công. Dưới đây là thông tin chi tiết:</p>
+
+      <h3 style="color: #2e86de; margin-top: 25px;">Thông tin bệnh nhân</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold; width: 35%;">Họ tên:</td>
+          <td style="padding: 8px 0;">{{FullName}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold;">Số điện thoại:</td>
+          <td style="padding: 8px 0;">{{Phone}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold;">Email:</td>
+          <td style="padding: 8px 0;">{{Email}}</td>
+        </tr>
+      </table>
+
+      <h3 style="color: #2e86de;">Thông tin cuộc hẹn</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold; width: 35%;">Ngày khám:</td>
+          <td style="padding: 8px 0;">{{AppointmentDate}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold;">Giờ khám:</td>
+          <td style="padding: 8px 0;">{{AppointmentTime}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold;">Bác sĩ:</td>
+          <td style="padding: 8px 0;">{{DoctorName}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold;">Chi nhánh:</td>
+          <td style="padding: 8px 0;">{{BranchName}}</td>
+        </tr>
+      </table>
+
+      <p style="margin-top: 20px;">Vui lòng đến trước giờ hẹn ít nhất 15 phút để làm thủ tục. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi qua email hoặc số điện thoại trên.</p>
+    </div>
+    <div style="background-color: #f0f0f0; padding: 15px; text-align: center; font-size: 13px; color: #888888;">
+      Đây là email tự động, vui lòng không phản hồi.<br />
+      &copy; 2025 Hệ thống đặt lịch khám bệnh
+    </div>
+  </div>
+</body>
+</html>
