@@ -1,0 +1,9 @@
+groups:
+- name: ram-alerts
+  rules:
+  - alert: HighRAMUsage
+    expr: (100 - node_memory_MemAvailable_bytes/node_memory_MemTotal_bytes * 100) > 17
+    for: 5s
+    annotations:
+      summary: "RAM usage high"
+      description: "RAM > 17 % trong 5 giây"
