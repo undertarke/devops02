@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment # Resource sử dụng
+metadata:
+  name: html-web-deploy # Tên resource khởi tạo
+spec: # Chưa nội dung cấu hình
+  replicas: 2 # Số lượng Pod tạo ra
+  selector:
+    matchLabels:
+      app: html-web # Dùng để Deployment sẽ quản lý pod
+  template:
+    metadata:
+      labels:
+        app: html-web
+    spec:
+      containers:
+      - name: html-web
+        image: undertarke/k8s:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m # yêu cầu tối thiểu 0.05 core
+          limits:
+            cpu: 100m # giới hạn tối đa 0.1 core
