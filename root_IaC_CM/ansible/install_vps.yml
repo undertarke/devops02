@@ -1,0 +1,23 @@
+- name: Tên của playbook
+  hosts: danh_sach_host
+  become: true
+  tasks:
+    - name: Cài đặt docker
+      apt:
+        name: docker.io
+        state: present
+    
+    - name: Cài đặt docker-compose
+      shell: curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+    - name: Cấp quyền thực thi cho docker-compose
+      shell: chmod 700 /usr/local/bin/docker-compose
+
+    - name: clone source
+      git:
+        repo: "https://github.com/undertarke/devops02.git"
+        dest: "/root/devops02"
+        version: "main"
+    
+    - name: deploy web
+      shell: cd /root/devops02/html && docker build . -t web && docker run -d -p 3000:80 web

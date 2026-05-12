@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment # Resource sử dụng
+metadata:
+  name: node-app-deploy # Tên resource khởi tạo
+spec: # Chưa nội dung cấu hình
+  replicas: 1 # Số lượng Pod tạo ra
+  selector:
+    matchLabels:
+      app: node-app # Dùng để Deployment sẽ quản lý pod
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+      - name: node-app
+        image: undertarke/k8s-node-down:latest
+        ports:
+        - containerPort: 8088
+        resources:
+          requests:
+            cpu: 50m # yêu cầu tối thiểu 0.05 core
+          limits:
+            cpu: 100m # giới hạn tối đa 0.1 core

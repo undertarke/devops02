@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pins – Localhost Image Feed</title>
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #fff;
+            color: #111;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+        }
+
+        header h1 span {
+            background: #e60023;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 18px;
+        }
+
+        .search input {
+            width: 250px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid #ddd;
+            background: #fafafa;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        .masonry {
+            column-count: 1;
+            column-gap: 16px;
+        }
+
+        @media (min-width:640px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width:900px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .masonry {
+                column-count: 4;
+            }
+        }
+
+        .pin {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .pin img {
+            width: 100%;
+            display: block;
+        }
+
+        .pin .meta {
+            padding: 10px;
+        }
+
+        .pin .title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .pin .desc {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .save {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e60023;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .pin:hover .save {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><span>P</span> Pins Local</h1>
+        <div class="search">
+            <input id="search" placeholder="Tìm kiếm..." />
+        </div>
+    </header>
+
+    <main>
+        <div id="masonry" class="masonry"></div>
+    </main>
+
+    <script>
+        const container = document.getElementById('masonry');
+        const searchInput = document.getElementById('search');
+
+        async function fetchImages(keyword = '') {
+            try {
+                const response = await axios.get(`http://47.129.251.155:8088/image`, {
+                    params: keyword ? { q: keyword } : {}
+                });
+
+                const data = response.data.data;
+                if (!Array.isArray(data)) {
+                    console.error('Kết quả trả về không phải là mảng');
+                    return;
+                }
+
+                container.innerHTML = '';
+                data.forEach(item => {
+                    const el = document.createElement('article');
+                    el.className = 'pin';
+                    el.innerHTML = `
+            <button class="save">Lưu</button>
+            <img width="100" height="350" src="https://000214268315-s3.s3.ap-southeast-1.amazonaws.com/${item.url}" alt="${item.title || ''}" loading="lazy">
+            <div class="meta">
+              <div class="title">${item.title || 'Ảnh không có tiêu đề'}</div>
+              <div class="desc">${item.description || ''}</div>
+            </div>
+          `;
+                    container.appendChild(el);
+                });
+
+            } catch (err) {
+                console.error('Lỗi khi gọi API:', err);
+                container.innerHTML = `<p style="color:red;text-align:center">Không thể tải ảnh từ API.</p>`;
+            }
+        }
+
+        // Gọi API khi trang load
+        fetchImages();
+
+        // Tìm kiếm theo từ khóa (debounce nhẹ)
+        let timeout;
+        searchInput.addEventListener('input', e => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => fetchImages(e.target.value.trim()), 400);
+        });
+    </script>
+</body>
+
+</html>
